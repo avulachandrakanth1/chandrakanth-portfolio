@@ -1,13 +1,17 @@
 import React from 'react'
 import {Link, NavLink } from "react-router-dom";
 import logo from '../../Assets/Images/profile-logo.png'
-import './Navbar.css'
+import ck_logo from '../../Assets/Images/logo.png'
+import './Navbar.css';
+import { Fade, Slide } from 'react-awesome-reveal';
+
 
 const Navbar = () => {
   return (
+    <Fade delay={1e3} cascade damping={1e-1} direction='down'>
     <header className="header">
         <NavLink className='logo' to="/">
-            <img src={logo} className="rounded-circle mx-2" width="30" height="30"/>
+            <img src={ck_logo} className="rounded-circle " width="35" height="35"/>
             <span className='logo-name'>Chandrakanth Avula</span>
         </NavLink>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
@@ -16,25 +20,25 @@ const Navbar = () => {
       </label>
       <ul class="menu">
             <li class="nav-item active">
-                <NavLink class="nav-link" to="/">Home</NavLink>
+                <NavLink class="nav-link" to="/home">Home</NavLink>
             </li>
             <li class="nav-item">
-                <NavLink class="nav-link" to="/">About</NavLink>
+                <NavLink class="nav-link" to="/about">About</NavLink>
             </li>
             <li class="nav-item">
-                <NavLink class="nav-link" to="/">Education</NavLink>
+                <NavLink class="nav-link" to="/education">Education</NavLink>
             </li>
             <li class="nav-item">
-                <NavLink class="nav-link" to="/">Skill</NavLink>
+                <NavLink class="nav-link" to="/skills">Skill</NavLink>
             </li>
             <li class="nav-item">
-                <NavLink class="nav-link" to="/">Projects</NavLink>
+                <NavLink class="nav-link" to="/projects">Projects</NavLink>
             </li>
             <li class="nav-item">
-                <NavLink class="nav-link" to="/">Certificates</NavLink>
+                <NavLink class="nav-link" to="/certificates">Certificates</NavLink>
             </li>
             <li class="nav-item">
-                <NavLink class="nav-link" to="/">Contact</NavLink>
+                <NavLink class="nav-link" to="/contact-details">Contact</NavLink>
             </li>
         </ul>
 
@@ -106,6 +110,8 @@ const Navbar = () => {
       */}
 
     </header>
+    </Fade>
+
   );
 /* <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
